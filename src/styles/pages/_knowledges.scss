@@ -1,0 +1,322 @@
+.knowledges {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    min-width:400px;
+    
+    .knowledgesContent {
+        display: grid; 
+        grid-template-columns: .8fr 1.2fr 1fr;
+        grid-template-rows: 75% 25%;
+        min-height: $minHeight;
+        height:100%;
+        // width: 90%;
+        position: relative;
+        overflow: hidden;
+        grid-template-areas: 
+            "L E E"
+            "O O H";
+
+        .languagesFrameworks, .experience-btp, .experience-dev, .otherSkills, .hobbies {
+            padding-top: .8rem;
+            background: rgb(0,20,38);
+            border-radius: $borderRadius;
+            padding-left:0.8rem;
+            min-width: 200px;
+                
+        }
+    
+        h3 {
+            font-size: 1.4rem;
+            margin: .5rem 0 1rem 1rem;
+            font-family: $font-2;
+            color: $color-4;
+            text-transform: uppercase;
+          }
+
+        .languagesFrameworks {
+            grid-area: L;
+            margin-bottom: .5rem;
+            padding-left: 1.5rem;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
+            grid-template-areas: 
+            "L"
+            "F"
+            "B";
+            
+            .languageDisplay {
+                grid-area: L;
+            }
+            .frontendDisplay {
+                grid-area: F;
+            }
+            .backendDisplay {
+                grid-area: B;
+            }
+
+            h3 {
+                margin-bottom: 0.3rem;
+                margin-left: 0rem;
+              }
+              .years {
+                margin-top: .5rem;
+                font-size: .65rem;
+                display: flex;
+                justify-content: space-between;
+                color: $white;
+        
+                span {
+                  width: 36%;
+        
+                  &:nth-child(2){
+                    text-align: center; 
+                    width: 20%;
+                  }
+                  &:nth-child(3){
+                    text-align: center;
+                    width: 44%;
+                  }
+                
+                  &:nth-child(2):before,
+                  &:nth-child(3):before {
+                    content:'';
+                    background: rgba(180, 179, 179, 0.507);
+                    position: absolute;
+                    height: 110px;
+                    width: 1px;
+                    transform: translate(9px, 19px);
+                  }
+                }
+              }
+              .languagesList {
+                padding-top: .5rem;
+        
+                li {
+                  color: $color-3;
+                }
+                .progressBar {
+                  height: .4rem;
+                  background: transparent;
+                  border-radius: 50px;
+                  margin-top: 0.2rem;
+                  position: relative;
+        
+                  &:after {
+                    content: '';
+                    position: absolute;
+                    background: $color-3;
+                    border-radius: 50px;
+                    height: .4rem;
+                    width: 0;
+                    animation: line 2s ease-out forwards;
+        
+                    @keyframes line {
+                      to {
+                        width: 100%;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+
+        .experience {
+            grid-area: E;
+            margin-bottom: .5rem;
+            margin-left: .5rem;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 51% 49%;
+            grid-template-areas: 
+            "D"
+            "B";
+            .mobileDisplay {
+                display: none;
+            }
+            h3 {
+                grid-area: 1;
+              }
+              h4 {
+                font-size: 1.1rem;
+                color: $color-4;
+                margin-left: 1rem;
+                
+              }
+              h5 {
+                color: $color-3;
+                padding: 0.1rem 0 0.5rem 1rem;
+              }
+              p {
+                text-align: justify;
+                padding: 0 1rem;
+                color: $white;
+                font-size: .95rem;
+                width:95%;
+              }
+
+            .experience-dev {
+                grid-area: D;
+                margin-bottom: .5rem;
+                padding-bottom: 1rem;
+
+                .exp-2 {
+                    margin: .8rem 0 .8rem 0;
+                }
+            }
+    
+            .experience-btp {
+                grid-area: B;
+                padding-bottom: 1rem;
+
+                .exp-2 {
+                    margin: 1rem 0 1rem 0;
+                }
+            }
+
+        }
+        
+
+    .otherSkills {
+        
+        grid-area: O;
+        h3 {
+            margin-left:0.5rem;
+        }
+        .list {
+            display: flex;
+            width: 95%;
+            height: 70%;
+            margin: 0 auto;
+            justify-content: space-around;
+    
+            ul {
+                height: 80%;
+                display: grid;
+    
+                i {
+                color: $color-4;
+                margin-right: .5rem;
+                }
+                li {
+                    color: $white;
+                }
+            }
+            }
+        }
+
+    .hobbies {
+        grid-area: H;
+        margin-left: .5rem;
+        ul {
+            height: 70%;
+            display: grid;
+
+            &:nth-child(2){
+                text-align: center; 
+                width: 20%;
+            }
+    
+            li {
+                margin-left: 1rem;
+                i {
+                position: absolute;
+                color: $color-4;
+                
+                }
+                span {
+                position: absolute;
+                transform: translateX(2.2rem);
+                color: $white;
+                }
+            }
+            }
+        }
+    }   
+}
+
+@media screen and (max-width: 1200px){
+    .knowledgesContent {
+      h3 {
+        font-size: 1.2rem !important;
+      }
+      .languagesList {
+        padding-top: .2rem !important;
+      }
+      p {
+        font-size: .8rem !important;
+      }
+      .otherSkills, .hobbies {
+        font-size: .8rem;
+      }
+    }
+}
+
+@media screen and (max-width: 1050px){
+    .knowledgesContent {
+        .languagesFrameworks{
+            padding-left: 1rem;
+        }   
+        h4 {
+        font-size: .9rem !important;
+        }
+        h5 {
+            font-size: .6rem !important;
+            padding: .2rem 1rem !important;
+        }
+        p{
+            font-size: .8rem !important;
+       
+        }
+          
+        }
+    
+}
+
+@media screen and (max-width: 700px){
+    .experience{
+            .mobileDisplay {
+                display: block !important;
+            }
+            .computerDisplay {
+                display: none;
+            }
+    }
+}
+
+
+
+@media screen and (max-width: 600px){
+    .knowledgesContent {
+      display: grid !important;
+      grid-template-columns: 1fr !important;
+      grid-template-rows: 600px 1fr 200px 200px !important;
+      
+      .languages {
+        grid-area: 1 !important;
+      }
+      .experience {
+        grid-area: 2 !important;
+        margin-left: 0 !important;
+        p {
+            display: none !important;
+        }
+        .mobileDisplay {
+            display: inline;
+        }
+        .computerDisplay {
+            display:none;
+        }
+      }
+      .otherSkills {
+        grid-area: 3 !important;
+        margin-right: 0 !important;
+      }
+      .hobbies {
+        grid-area: 4 !important;
+        margin-top: .5rem !important;
+        padding-bottom: 1rem ;
+        margin-left: 0 !important;
+      }
+    }
+}
