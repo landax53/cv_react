@@ -1,10 +1,12 @@
 .portfolio {
+    padding-left: 1rem;
+    padding-right: 1rem;
     .portfolioContent {
       width: 100%;
       display: grid;
       min-height: $minHeight;
       grid-template-columns: 1fr;
-      grid-template-rows: 50px 1fr;
+      grid-template-rows: 5% 95%;
       grid-template-areas: 
         "1"
         "2";
@@ -80,24 +82,26 @@
       grid-area: 2;
       display: flex;
       flex-wrap: wrap;
-      justify-content: space-around;
+      justify-content: space-between;
   
       .project {
         background: $color-1;
         border-radius: $borderRadius;
         margin: 0.5rem 0 0 0;
-        text-align: center;
+        // text-align: center;
         width: 32%;
         max-height: 50%;
+        height:49%;
         padding: .3rem;
         box-shadow: $shadow;
         display: grid;
-        grid-template-rows: 15% 15% 55% 15%;
+        grid-template-rows: 15% 15% 40% 15% 15%;
         grid-template-areas: 
           "1"
           "2"
           "3"
-          "4";
+          "4"
+          "5";
       }
       .icons {
         grid-area: 1;
@@ -119,21 +123,26 @@
         @include verticalCenter;
         justify-content: left;
         color: $color-4;
-  
       }
+      
       img {
         grid-area: 3;
         object-fit: cover;
         margin: 0 auto;
         width: 100%;
-        height: 55%;
+        height: 70%;
         box-shadow: 0 2px 6px #333;
         border-radius: 4px;
         cursor: pointer;
         @include verticalCenter;
+
+      }
+      h5{
+        grid-area: 4;
+        color: $color-3;
       }
       .infos {
-        grid-area: 4;
+        grid-area: 5;
         color: $color-4;
         cursor: pointer;
         font-size: 1.5rem;

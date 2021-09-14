@@ -10,9 +10,7 @@ const NotFound = () => {
                     <i className="fas fa-home"></i>
                     <span>Accueil</span>
                 </NavLink>
-            </div>
-            
-            
+            </div>    
         </div>
     );
 };

@@ -10,9 +10,9 @@ class Project extends Component {
             showInfo:!this.state.showInfo
         })
     }
-    
+
     render() {
-        let {name, languagesIcons, source, info, picture} = this.props.item;
+        let {name, languagesIcons, source, info, picture, backend} = this.props.item;
         return (
             <div className="project">
                 {/*Carte*/}
@@ -23,6 +23,7 @@ class Project extends Component {
                 </div>
                 <h3>{name}</h3>
                 <img src={picture} alt="" onClick={this.handleInfo}/>
+                {/* <h5>Base de données : {backend}</h5> */}
                 <span className="infos" onClick={this.handleInfo}>
                     <i className="fas fa-plus-circle"></i>
                 </span>

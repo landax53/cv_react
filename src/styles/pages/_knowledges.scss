@@ -8,8 +8,6 @@
         grid-template-columns: .8fr 1.2fr 1fr;
         grid-template-rows: 75% 25%;
         min-height: $minHeight;
-        height:100%;
-        // width: 90%;
         position: relative;
         overflow: hidden;
         grid-template-areas: 
@@ -186,7 +184,7 @@
         .list {
             display: flex;
             width: 95%;
-            height: 70%;
+            height: 60%;
             margin: 0 auto;
             justify-content: space-around;
     
@@ -209,7 +207,7 @@
         grid-area: H;
         margin-left: .5rem;
         ul {
-            height: 70%;
+            height: 60%;
             display: grid;
 
             &:nth-child(2){
