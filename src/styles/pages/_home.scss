@@ -1,10 +1,10 @@
 .home {
   padding-left: 1rem;
   padding-right: 1rem;
+
   .homeContent {
     min-height: $minHeight;
     width: 100%;
-    min-height: $minHeight;
     border-radius: $borderRadius;
     position: relative;
     overflow: hidden;
@@ -57,8 +57,9 @@
     }
   }
 }
-@media screen and (max-width: 850px) {
-  .homeContent {
+@media screen and (max-width: 950px) {
+  .home .homeContent {
+    min-height: 88vh;
     &:after {
       background: url("../../media/above_computer.jpg") no-repeat 60% 50% /
         cover !important;
@@ -83,11 +84,5 @@
     h2 {
       font-size: 1.8rem !important;
     }
-  }
-}
-
-@media screen and (max-height: 500px) {
-  .homeContent {
-    height: 490px;
   }
 }
