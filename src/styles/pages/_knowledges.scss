@@ -279,10 +279,11 @@
 }
 
 @media screen and (max-width: 600px) {
-  .knowledgesContent {
+  .knowledges .knowledgesContent {
+    height: 100%;
     display: grid !important;
     grid-template-columns: 1fr !important;
-    grid-template-rows: 600px 1fr 150px 170px !important;
+    grid-template-rows: 600px 1fr 150px 170px;
 
     .languages {
       grid-area: 1 !important;

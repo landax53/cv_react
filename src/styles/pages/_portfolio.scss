@@ -2,7 +2,7 @@
   margin: 0;
   padding-left: 1rem;
   padding-right: 1rem;
-  border: 3px solid yellow;
+  // border: 3px solid yellow;
   width: 100%;
 
   .portfolioContent {
@@ -135,7 +135,7 @@
       margin: 0 auto;
       width: 100%;
       height: 70%;
-      box-shadow: 0 2px 6px #333;
+      box-shadow: 0 0 6px $color-3;
       border-radius: 4px;
       cursor: pointer;
       @include verticalCenter;
@@ -169,13 +169,13 @@
       .infosContent {
         position: relative;
         top: 25%;
-        width: 600px;
+        width: 40%;
         margin: 0 auto;
         color: $color-4;
         background: $color-1;
         border-radius: $borderRadius;
         padding: 2rem;
-        box-shadow: 0 10px 10px #333;
+        box-shadow: 0 0 10px $color-3;
         animation: popup 0.6s ease forwards;
         transform: scale(0);
         transform-origin: center;
@@ -229,7 +229,7 @@
       }
     }
     .infosContent {
-      width: 100% !important;
+      width: 95% !important;
     }
   }
 }
@@ -251,6 +251,10 @@
       }
       span i {
         margin-top: 3rem;
+      }
+
+      .showInfos .infosContent {
+        width: 95%;
       }
     }
   }
