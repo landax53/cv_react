@@ -41,7 +41,11 @@
       }
 
       .pdf {
+        &:active {
+          transform: scale(0.95);
+        }
         a {
+          position: relative;
           font-size: 1.5rem;
           background: $color-4;
           padding: 1rem 2rem;
@@ -51,6 +55,7 @@
 
           &:hover {
             background: $color-3;
+            box-shadow: 0 0 5px $color-3;
           }
         }
       }

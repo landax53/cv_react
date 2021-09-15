@@ -59,12 +59,13 @@
         // border: 1px solid black;
 
         &:hover i {
-          transform: translate(3px, 3px);
+          transform: scale(1.05);
           color: $color-3;
         }
 
         &:hover span {
           color: $color-3;
+          transform: scale(1.05);
         }
 
         a {
@@ -78,7 +79,7 @@
         i {
           position: absolute;
           font-size: 0.95rem;
-          transform: translateY(3px);
+          transform: translateY(5px);
           transition: 0.2s ease;
         }
         span {
