@@ -95,13 +95,12 @@
       padding: 0.3rem;
       box-shadow: $shadow;
       display: grid;
-      grid-template-rows: 15% 15% 40% 15% 15%;
+      grid-template-rows: 15% 15% 40% 15%;
       grid-template-areas:
         "1"
         "2"
         "3"
-        "4"
-        "5";
+        "4";
     }
     .icons {
       grid-area: 1;
@@ -136,12 +135,12 @@
       cursor: pointer;
       @include verticalCenter;
     }
-    h5 {
-      grid-area: 4;
-      color: $color-3;
-    }
+    // h5 {
+    //   grid-area: 4;
+    //   color: $color-3;
+    // }
     .infos {
-      grid-area: 5;
+      grid-area: 4;
       color: $color-4;
       cursor: pointer;
       font-size: 1.5rem;
@@ -218,6 +217,7 @@
   .portfolioContent {
     .project {
       width: 49% !important;
+      height: 20%;
 
       i {
         font-size: 1rem;
@@ -229,18 +229,20 @@
   }
 }
 @media (max-width: 520px) {
-  .radioDisplay ul {
-    padding: 0 0.3rem;
-  }
   .portfolioContent {
-    grid-template-rows: 1fr !important;
-
-    .project {
-      grid-template-rows: 30px 40px 80px 40px !important;
-      width: 100% !important;
+    display: grid;
+    grid-template-rows: 30px 1fr !important;
+    .projects {
+      .project {
+        width: 100%;
+        height: 300px !important;
+      }
 
       img {
         height: 100% !important;
+      }
+      span i {
+        margin-top: 3rem;
       }
     }
   }
