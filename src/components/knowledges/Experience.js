@@ -54,7 +54,7 @@ const Experience = () => {
         </div>
         <div className="exp-1 mobileDisplay">
           <h4>Ingénieur en études de structures portuaires</h4>
-          <h5>ACCOAST, INGEROP, VINCI - 2016 à 2021</h5>
+          <h5>ACCOAST / INGEROP / VINCI - 2016 à 2021</h5>
           <p>
             Diagnostics de structures et préconisation de réparation d'ouvrages.
             Dimensionnement d'ouvrages et suivi d'exécution des chantiers.
