@@ -173,7 +173,8 @@
 
 @media screen and (max-width: 950px) {
   .contact .contactContent {
-    min-height: 87vh;
+    height: 90vh;
+    min-height: 600px;
 
     .header::before {
       position: absolute;

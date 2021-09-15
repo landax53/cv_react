@@ -64,7 +64,8 @@
 }
 @media screen and (max-width: 950px) {
   .home .homeContent {
-    min-height: 400px;
+    height: 90vh;
+    min-height: 600px;
     &:after {
       background: url("../../media/above_computer.jpg") no-repeat 60% 50% /
         cover !important;
