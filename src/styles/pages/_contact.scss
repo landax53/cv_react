@@ -23,7 +23,7 @@
       position: relative;
       background: $color-1;
       height: 100%;
-      border: solid black 1px;
+      // border: solid black 1px;
 
       &:before {
         content: "";
@@ -46,7 +46,7 @@
     }
     .contactBox {
       grid-area: 2;
-      border: black solid 1px;
+      // border: black solid 1px;
       margin: 0 auto;
       // padding: 1rem 3rem;
       z-index: 2;
@@ -78,7 +78,7 @@
         width: inherit;
         display: grid;
         margin-top: 4rem;
-
+        padding-left: 1rem;
         li {
           position: relative;
         }
@@ -111,7 +111,7 @@
     .socialNetwork {
       grid-area: 3;
       @include verticalCenter;
-      border: black 1px solid;
+      // border: black 1px solid;
 
       ul {
         display: flex;
@@ -169,7 +169,10 @@
   @media screen and (max-width: 500px) {
     .contactContent {
       .contactBox {
-        min-width: 100% !important;
+        min-width: 90% !important;
+        ul {
+          padding-left: 1rem;
+        }
       }
       span {
         font-size: 0.9rem !important;
@@ -178,5 +181,11 @@
         font-size: 0.9rem;
       }
     }
+  }
+}
+
+@media screen and (max-height: 600px) {
+  .contactContent {
+    height: 570px;
   }
 }

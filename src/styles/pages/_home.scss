@@ -85,3 +85,9 @@
     }
   }
 }
+
+@media screen and (max-height: 500px) {
+  .homeContent {
+    height: 490px;
+  }
+}
